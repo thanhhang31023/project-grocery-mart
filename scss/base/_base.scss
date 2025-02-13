@@ -1,0 +1,18 @@
+//width và height sẽ bao gồm cả padding và border
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+//font-size của thẻ <html> là 16px
+//16px×62.5%=10px
+//nghĩa là 1 rem sẽ tương đương với 10px
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Gordita, sans-serif;
+}
