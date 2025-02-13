@@ -117,8 +117,8 @@
     position: absolute;
     inset: 0 0 0 var(--main-column-width);
 
-    // display: none;
-    display: grid;
+     display: none;
+   // display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--inner-padding);
 
