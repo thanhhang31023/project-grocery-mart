@@ -16,6 +16,7 @@ html {
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
+        --footer-bg-color: var(--header-bg-color);
     }
 
     // Dropdown
