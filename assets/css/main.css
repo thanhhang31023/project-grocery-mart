@@ -169,9 +169,11 @@ button,
 input,
 textarea,
 select {
+  padding: 0;
   font-family: inherit;
   color: inherit;
   outline: none;
+  border: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2055,7 +2057,6 @@ html {
 }
 
 .filter {
-  display: none;
   position: absolute;
   right: 0;
   top: 50px;
@@ -2113,17 +2114,168 @@ html {
 .filter__form-slider::after {
   left: var(--max-value);
 }
-.filter__form-input, .filter__form-select-wrap {
+.filter__form-text-input, .filter__form-select-wrap {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
-.filter__form-input {
+.filter__form-text-input {
+  display: flex;
+  align-items: center;
+  width: 334px;
+  height: 44px;
+  padding: 0 16px;
+  overflow: hidden;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.filter__form-text-input .filter-wrap {
+  position: relative;
+  z-index: 1;
+}
+.filter__form-text-input .filter {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--filter-form-bg);
+  filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+}
+.filter__form-text-input .filter__heading {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.filter__form-text-input .filter__form {
+  margin-top: 30px;
+}
+.filter__form-text-input .filter__form-label {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.filter__form-text-input .filter__form-label--small {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  line-height: 142.857%;
+}
+.filter__form-text-input .filter__form-group {
+  margin-top: 20px;
+}
+.filter__form-text-input .filter__form-group--inline {
+  display: flex;
+  gap: 30px;
+}
+.filter__form-text-input .filter__form-slider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #d2d1d6;
+}
+.filter__form-text-input .filter__form-slider::before, .filter__form-text-input .filter__form-slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 6px solid #ffb700;
+  background: var(--filter-form-bg);
+}
+.filter__form-text-input .filter__form-slider::before {
+  left: var(--min-value);
+}
+.filter__form-text-input .filter__form-slider::after {
+  left: var(--max-value);
+}
+.filter__form-text-input .filter__form-text-input, .filter__form-text-input .filter__form-select-wrap {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
+.filter__form-text-input .filter__form-text-input {
+  display: flex;
+  align-items: center;
+  width: 334px;
+  height: 44px;
+  padding: 0 16px;
+  overflow: hidden;
+}
+.filter__form-text-input .filter__form-text-input--small {
   width: 121px;
   height: 36px;
   padding: 0 12px;
+}
+.filter__form-text-input .filter__form-text-input--small .filter__form-text-input .filter__form-input {
+  font-size: 1.4rem;
+}
+.filter__form-text-input .filter__form-input {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.filter__form-text-input .filter__form-input::placeholder {
+  color: #9e9da8;
+  font-weight: 400;
+}
+.filter__form-text-input .filter__form-input-icon {
+  margin-left: 12px;
+}
+.filter__form-text-input .filter__form-select-wrap {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.filter__form-text-input .filter__form-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 142.857%;
+  cursor: pointer;
+}
+.filter__form-text-input .filter__form-select + .filter__form-text-input .filter__form-select {
+  border-left: 1px solid #d2d1d6;
+}
+.filter__form-text-input .filter__form-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.filter__form-text-input .filter__form-tag {
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #9e9da8;
+  background: var(--filter-form-tag-bg);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  transition: color 0.2s;
+}
+.filter__form-text-input .filter__form-tag:hover {
+  color: var(--text-color);
+}
+.filter__form-text-input .filter__row {
+  display: flex;
+}
+.filter__form-text-input .filter__separate {
+  width: 1px;
+  margin: 0 30px;
+  background: #eee;
+}
+.filter__form-text-input--small {
+  width: 121px;
+  height: 36px;
+  padding: 0 12px;
+}
+.filter__form-text-input-text-input--small .filter__form-text-input-input {
+  font-size: 1.4rem;
 }
 .filter__form-select-wrap {
   display: flex;
