@@ -3,18 +3,19 @@
 .dropdown {
     position: absolute;
     left: 0;
+
     width: min(1240px, 100%);
     padding-top: 54px;
     display: none;
 
     @include abstracts.screen(lg) {
         position: initial;
-
         padding-top: 0;
     }
 
     &__inner {
         --inner-padding: 30px;
+
         position: relative;
 
         padding: var(--inner-padding);
@@ -140,7 +141,7 @@
 
     &__item {
         &--active .sub-menu {
-            display: none;
+            display: grid;
         }
     }
 
@@ -163,7 +164,6 @@
     inset: 0 0 0 var(--main-column-width);
 
     display: none;
-    // display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--inner-padding);
 

@@ -1954,7 +1954,7 @@ html {
   }
 }
 .menu-column__item--active .sub-menu {
-  display: none;
+  display: grid;
 }
 .menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
   color: #0071dc;
