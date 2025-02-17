@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 //font-size của thẻ <html> là 16px
 //16px×62.5%=10px
 //nghĩa là 1 rem sẽ tương đương với 10px
@@ -46,7 +50,6 @@ select {
     color: inherit;
     outline: none;
     border: none;
-    -webkit-tap-highlight-color: transparent;
 
     input {
         background: transparent;
