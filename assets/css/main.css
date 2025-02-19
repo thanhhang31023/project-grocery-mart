@@ -1575,9 +1575,7 @@ html {
 @media (max-width: 767.98px) {
   .top-bar__logo {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    left: 8%;
     margin-left: 0;
   }
 }
@@ -1719,6 +1717,7 @@ html {
 @media (max-width: 767.98px) {
   .top-act {
     margin-left: 0;
+    gap: 0px;
   }
   .top-act__sign-up {
     height: 40px !important;
@@ -1936,6 +1935,13 @@ html {
   justify-content: space-between;
   gap: 15px;
   padding: 14px 0;
+}
+@media (max-width: 767.98px) {
+  .user-menu__link {
+    gap: 5px;
+    padding: 0;
+    margin-right: 0;
+  }
 }
 .user-menu__separate {
   margin-top: 10px;
@@ -2499,7 +2505,7 @@ html {
   height: 40px;
 }
 .btn + .btn:not(.btn--no-margin) {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .btn--text {
   background: transparent;

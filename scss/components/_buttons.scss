@@ -65,8 +65,9 @@
 
     + .btn {
         &:not(.btn--no-margin) {
-            margin-left: 20px;
-        }
+            margin-left: 10px;
+
+                }
     }
 
     &--text {
