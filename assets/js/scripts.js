@@ -228,3 +228,21 @@ window.addEventListener("template-loaded", () => {
 
 const isDark = localStorage.dark === "true";
 document.querySelector("html").classList.toggle("dark", isDark);
+
+
+// Ẩn hiện mật khẩukhẩu
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".form__toggle-password").forEach((icon) => {
+        icon.addEventListener("click", function () {
+            let passwordField = this.parentElement.querySelector("input"); // Lấy input gần icon nhất
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                this.src = "./assets/icons/unlock.svg"; // Đổi icon thành mở khóa
+            } else {
+                passwordField.type = "password";
+                this.src = "./assets/icons/lock.svg"; // Đổi icon thành khóa
+            }
+        });
+    });
+});

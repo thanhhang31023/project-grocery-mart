@@ -52,6 +52,7 @@
                                     name=""
                                     id=""
                                     placeholder="Email"
+                                    value="admin@grocerymart.com"
                                     class="form__input"
                                     autofocus
                                     required
@@ -68,12 +69,14 @@
                                     name=""
                                     id=""
                                     placeholder="Password"
+                                    value="11111111"
                                     class="form__input"
                                     required
                                     minlength="6"
                                 />
-                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <!-- <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" /> -->
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                <img src="./assets/icons/unlock.svg" alt="Show Password" class="form__toggle-password" onclick="togglePassword('password', this)" />
                             </div>
                             <p class="form__error">Password must be at least 6 characters</p>
                         </div>
