@@ -2017,9 +2017,6 @@ html {
 .footer__link:hover {
   color: #0071dc;
 }
-.footer__text, .footer__copyright {
-  color: var(--footer-text-color);
-}
 @media (max-width: 991.98px) {
   .footer__text {
     width: min(400px, 100%);

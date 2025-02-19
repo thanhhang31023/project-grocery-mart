@@ -212,22 +212,48 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
-window.addEventListener("template-loaded", () => {
-    const switchBtn = document.querySelector("#switch-theme-btn");
-    if (switchBtn) {
-        switchBtn.onclick = function () {
-            const isDark = localStorage.dark === "true";
+document.addEventListener("DOMContentLoaded", function () {
+    const switchBtns = document.querySelectorAll(".switch-theme-btn");
+
+    switchBtns.forEach((btn) => {
+        btn.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn nhảy trang
+
+            const isDark = localStorage.getItem("dark") === "true";
             document.querySelector("html").classList.toggle("dark", !isDark);
             localStorage.setItem("dark", !isDark);
-            switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
-        };
-        const isDark = localStorage.dark === "true";
-        switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
-    }
+
+            // Cập nhật nội dung của tất cả các nút
+            switchBtns.forEach((b) => {
+                b.querySelector("span").textContent = !isDark ? "Light mode" : "Dark mode";
+            });
+        });
+    });
+
+    // Kiểm tra trạng thái theme khi tải trang
+    const isDark = localStorage.getItem("dark") === "true";
+    document.querySelector("html").classList.toggle("dark", isDark);
+    switchBtns.forEach((b) => {
+        b.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+    });
 });
 
-const isDark = localStorage.dark === "true";
-document.querySelector("html").classList.toggle("dark", isDark);
+// window.addEventListener("template-loaded", () => {
+//     const switchBtn = document.querySelector("#switch-theme-btn");
+//     if (switchBtn) {
+//         switchBtn.onclick = function () {
+//             const isDark = localStorage.dark === "true";
+//             document.querySelector("html").classList.toggle("dark", !isDark);
+//             localStorage.setItem("dark", !isDark);
+//             switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
+//         };
+//         const isDark = localStorage.dark === "true";
+//         switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+//     }
+// });
+
+// const isDark = localStorage.dark === "true";
+// document.querySelector("html").classList.toggle("dark", isDark);
 
 
 // Ẩn hiện mật khẩukhẩu
