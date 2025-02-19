@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // window.addEventListener("template-loaded", () => {
-//     const switchBtn = document.querySelector("#switch-theme-btn");
+//     const switchBtn = document.querySelector(".switch-theme-btn");
 //     if (switchBtn) {
 //         switchBtn.onclick = function () {
 //             const isDark = localStorage.dark === "true";
@@ -254,7 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // const isDark = localStorage.dark === "true";
 // document.querySelector("html").classList.toggle("dark", isDark);
-
 
 // Ẩn hiện mật khẩukhẩu
 document.addEventListener("DOMContentLoaded", function () {
