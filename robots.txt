@@ -1,0 +1,12 @@
+User-agent: *
+Disallow:
+
+# Chặn các bot không cần thiết để giảm tải server
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+
+Sitemap: https://thanhhang31023.github.io/project-grocery-mart/sitemap.xml
