@@ -21,6 +21,18 @@
 
         <!-- Scripts -->
         <script src="./assets/js/scripts.js"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6FLQM4FKF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-L6FLQM4FKF");
+        </script>
     </head>
     <body>
         <main class="auth">
@@ -76,7 +88,12 @@
                                 />
                                 <!-- <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" /> -->
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                                <img src="./assets/icons/unlock.svg" alt="Show Password" class="form__toggle-password" onclick="togglePassword('password', this)" />
+                                <img
+                                    src="./assets/icons/unlock.svg"
+                                    alt="Show Password"
+                                    class="form__toggle-password"
+                                    onclick="togglePassword('password', this)"
+                                />
                             </div>
                             <p class="form__error">Password must be at least 6 characters</p>
                         </div>
