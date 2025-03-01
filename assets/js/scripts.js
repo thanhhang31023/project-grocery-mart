@@ -263,10 +263,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (passwordField.type === "password") {
                 passwordField.type = "text";
-                this.src = "../assets/icons/unlock.svg"; // Đổi icon thành mở khóa
+                this.src = "./assets/icons/unlock.svg"; // Đổi icon thành mở khóa
             } else {
                 passwordField.type = "password";
-                this.src = "../assets/icons/lock.svg"; // Đổi icon thành khóa
+                this.src = "./assets/icons/lock.svg"; // Đổi icon thành khóa
             }
         });
     });
